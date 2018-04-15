@@ -1,5 +1,6 @@
 /* Mobile Styles */
 @media only screen and (max-width: 1300px) {
+
   .card {
     margin-left: 33%;
     margin-right: 33%;
@@ -13,12 +14,13 @@
     width: 100%;
 
   }
-  h1, h2, p {
+  h1, h2{
     text-align: center;
   }
-  #about, #game, #art {
+  #about, #game, #art, #blog {
     font-size:16px;
     width: 100%;
+    text-align: center;
   }
   #maintitle {
     text-align: center;
@@ -65,11 +67,12 @@
   }
 
 
-  #art, #about, #game{
+  #art, #about, #game, #blog{
     font-size:14px;
     height: 25%;
     width: 30%;
     position: absolute;
+    display:none;
   }
   #maintitle {
     text-align: center;
@@ -109,37 +112,53 @@
   h1{
     margin: 0px;
   }
-  #aboutbutton:hover,#gamebutton:hover,#artbutton:hover {
+  #aboutbutton:hover,#gamebutton:hover,#artbutton:hover,#blogbutton:hover{
     animation: fade;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
   }
-  #aboutbutton,#gamebutton,#artbutton {
+  #aboutbutton,#gamebutton,#artbutton,#blogbutton{
     animation: reversefade;
     animation-duration: 0.8s;
     animation-fill-mode: backwards;
 
   }
 
-  #about,#game,#art {
+  #about,#game,#art,#blog {
     opacity: 0;
   }
 
   #aboutbutton:hover + #about {
+    display: inline-block;
     animation: appear;
     animation-duration: 0.9s;
     animation-fill-mode: forwards;
   }
   #gamebutton:hover + #game {
+    display: inline-block;
     animation: appear;
     animation-duration: 0.9s;
     animation-fill-mode: forwards;
   }
   #artbutton:hover + #art {
+    display: inline-block;
     animation: appear;
     animation-duration: 0.9s;
     animation-fill-mode: forwards;
   }
+  #blogbutton:hover + #blog {
+    display: inline-block;
+    animation: appear;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+  }
+  #about:hover, #blog:hover, #game:hover, #art:hover {
+    opacity: 1;
+    display: inline-block;
+
+  }
+
+
 
 
 }
@@ -159,9 +178,49 @@ h1{
 
 a{
   color: black;
+  font-family: courier;
 }
 
 
 body {
   margin-bottom:10%;
+}
+
+#maintitle {
+  text-align: center;
+}
+
+.bloglist {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 50px;
+  padding: 0px;
+}
+
+article{
+  text-align: left;
+}
+
+@keyframes appearblog{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#blogheader, #maintitle {
+  animation:appearblog;
+  animation-duration: 2s;
+  animation-fill-mode: fowards;
+}
+
+#blogback {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
 }
