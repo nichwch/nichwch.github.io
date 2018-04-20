@@ -1,0 +1,80 @@
+<html>
+<head>
+  <title>Nicholas Chen</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <div id="maintitle">
+    <h1>Machine Gods Final Reflection Part 1: Development</h1>
+    <a href="blog.html">back to blog</a>
+  </div>
+  <div class="card" id="blogheader">
+    <img class = "image" src="name.jpg"></img>
+  </div>
+  <div class="bloglist">
+    <article>
+      <p>4/19/2018
+      </p>
+      <p>
+      I released my first videogame Machine Gods a few weeks ago.
+    </p>
+    <p>
+      A little about the game - it’s a 2D sidescrolling platformer game with some shooting based combat. The game was made with <a href="https://gdevelop-app.com/">GDevelop</a> and I hand drew the art for the game. Here are my final reflections on the game, both the finished product and the process of making it.
+    </p>
+    <p>
+      The reflection will be split into 3 parts. The first part (this post) will reflect on the development of the game, the second part will reflect on the creative process, and the final part will detail some more sentimental reflections on video games in general. The other parts will be released soon.
+    </p>
+    <h2>
+      Expectation vs Reality
+    </h2>
+    <p>
+      In my first <a href="https://nichwch.github.io/post1_gamelog1.html">devlog</a> I detailed the inspirations I had for Machine Gods. If you read over it, you’ll find that my original intention was to make Machine Gods a roguelite platformer akin to Risk of Rain. Looking at the final product, how well did my vision transfer to reality?
+    </p>
+    <p>
+      Gameplay wise, Machine Gods handles much like Risk of Rain. The platformer action and shooting mechanics are simpler, but roughly the same in principle. However, to finish the game, I had to cut a lot of planned features. For one, Machine Gods (the finished product) isn’t a roguelike. The game’s structured with pre-designed levels; more like a traditional platformer (a la Super Mario Bros) - you progress from one level to the next, with a bit of narrative sprinkled in. With the roguelike elements of the game gone, the RPG elements were cut as well. There are no items to collect and no attributes to level.
+    </p>
+    <p>
+      In short, the final product was very different from what I had originally planned. Why were these cuts made?
+    </p>
+    <p>
+      The first reason is that there was a large gap in the development of the game. I laid the groundwork for the RPG/Roguelite features of the game over the summer. When first semester started, I found myself pulled too thin between school, college applications, and extracurricular activities, and took a break from working on Machine Gods. When I returned, I found that I simply couldn’t understand much of the code I had written.
+    </p>
+    <p>
+      If that sounds like my negligence or stupidity to you, you’re right - I didn’t document any of my code since it was a solo project - but there were also legitimate engine limitations inherent to GDevelop that caused this, which brings me to my second reason: GDevelop has no true object oriented features. In fact, it barely has any data structures at all; the platform barely supports arrays.
+    </p>
+    <p>
+      Consider the following development obstacle. I wanted to add items to the game that the player would be able to equip, and would perform an action when the player used them. A typical implementation would be to create an interface representing the properties of all items, and then have child classes representing specific items. These child classes could then have methods detailing what they do when they’re used by the player.
+    </p>
+    <p>
+      GDevelop has no such OOP features, so I ended up implementing several arrays detailing each item, it’s name, it’s cost in the in-game store, etc. For the actions that the items performed, I had to settle for an incredibly unelegant implementation - the game loop would check to see which item was equipped when the player pressed the use key, and then it would execute a predetermined script that would execute the item’s action. Basically, a giant switch statement with hard-coded scripts for each item. GDevelop doesn’t let you pass in arguments to functions either, which limits the effectiveness of this approach even further.
+    </p>
+    <p>
+      To make all of this worse, GDevelop’s documentation is basically nonexistent. The developer is some French college student, and half the posts on the support forum are in French.
+    </p>
+    <p>
+      This was my first videogame. When I started developing it, I figured using a drag and drop interface would save me time and headaches. My intuition now tells me that using a code based engine would have been easier - I haven’t tried both ways, obviously, but I’m in the process of learning Unity right now and it seems like a far better platform in every regard - the C# scripts it uses allow for object oriented design, and the amount of forums and documentation that Unity has dwarves GDevelop’s.
+    </p>
+    <h2>
+      Final Takeaways
+    </h2>
+    <p>
+      1. Use the right tool for the job. If you’re building an RPG or Roguelite, you’ll probably need OOP features - plan accordingly.
+    </p>
+    <p>
+      2. Document your code! You never know when there might be a gap in development.
+    </p>
+    <p>
+      3. Do your research on a platform before you begin a project using it - specifically, check to see that it has good documentation because you’re definitely going to need it.
+    </p>
+    <p>
+      That wraps up this part of the reflection - the next part will reflect on the creative process of making the game.
+    </p>
+
+    </article>
+  </div>
+
+
+
+</body>
+</html>
