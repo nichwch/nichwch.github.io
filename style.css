@@ -224,3 +224,7 @@ article{
   margin-right: auto;
   padding: 0px;
 }
+
+body {
+   background-image: url("jadeempire-web.png");
+}
