@@ -1,233 +1,48 @@
 /* Mobile Styles */
-@media only screen and (max-width: 1300px) {
-
-  .card {
-    margin-left: 33%;
-    margin-right: 33%;
-    margin-top: 3%;
-    width: 34%;
-    padding: 1px;
-  }
-  .image {
-    border-width: 1px;
-    border-style: solid;
-    width: 100%;
-
-  }
-  h1, h2{
-    text-align: center;
-  }
-  #about, #game, #art, #blog {
-    font-size:16px;
-    width: 100%;
-    text-align: left;
-  }
-  #maintitle {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3%;
-    width: 500px;
-  }
-
-  #artimage{
-    margin-bottom: 5%;
-  }
-
-  p {
-    min-width: 255px;
-    font-size: 30px;
-  }
-  h1, h2{
-    font-size: 30px;
-  }
-
-  body {
-    min-width: 850px;
-  }
-}
-
-/* Desktop Styles */
-@media only screen and (min-width: 1301px) {
-  .card {
-
-    margin-left: 33%;
-    margin-right: 33%;
-    margin-top: 3%;
-    width: 34%;
-    padding: 1px;
-  }
-
-  .image {
-    border-width: 1px;
-    border-style: solid;
-    width: 41.17647%;
-    margin-left: 29.41%;
-
-  }
-
-
-  #art, #about, #game, #blog{
-    font-size:14px;
-    height: 25%;
-    width: 30%;
-    position: absolute;
-    display:none;
-
-  }
-  #maintitle {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3%;
-    width: 500px;
-  }
-  @keyframes fade {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0.2;
-    }
-  }
-  @keyframes reversefade {
-    0% {
-      opacity: 0.2;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes appear{
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  h2, p {
-    padding-left: 5%;
-  }
-  h1{
-    margin: 0px;
-  }
-  #aboutbutton:hover,#gamebutton:hover,#artbutton:hover,#blogbutton:hover{
-    animation: fade;
-    animation-duration: 0.8s;
-    animation-fill-mode: forwards;
-  }
-  #aboutbutton,#gamebutton,#artbutton,#blogbutton{
-    animation: reversefade;
-    animation-duration: 0.8s;
-    animation-fill-mode: backwards;
-
-  }
-
-  #about,#game,#art,#blog {
-    opacity: 0;
-  }
-
-  #aboutbutton:hover + #about {
-    display: inline-block;
-    animation: appear;
-    animation-duration: 0.9s;
-    animation-fill-mode: forwards;
-  }
-  #gamebutton:hover + #game {
-    display: inline-block;
-    animation: appear;
-    animation-duration: 0.9s;
-    animation-fill-mode: forwards;
-  }
-  #artbutton:hover + #art {
-    display: inline-block;
-    animation: appear;
-    animation-duration: 0.9s;
-    animation-fill-mode: forwards;
-  }
-  #blogbutton:hover + #blog {
-    display: inline-block;
-    animation: appear;
-    animation-duration: 0.9s;
-    animation-fill-mode: forwards;
-  }
-  #about:hover, #blog:hover, #game:hover, #art:hover {
-    opacity: 1;
-    display: inline-block;
-
-  }
-
-
+@media only screen and (max-width: 600px) {
 
 
 }
 
-
-
-h1, h2, p {
-  font-family: courier;
+h1,p{
+  font:courier;
 }
 
-h1{
-  text-align: center;
+.card{
+  width:500px;
+  height:500px;
+  position:relative;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
 }
 
-
-
-
-a{
-  color: black;
-  font-family: courier;
+.opaqueLayer{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  background-color:grey;
+  opacity:0.3;
 }
 
-
-body {
-  margin-bottom:10%;
+.videoBackground{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  z-index:-2;
 }
 
-#maintitle {
-  text-align: center;
-}
-
-.bloglist {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  margin-top: 50px;
-  padding: 0px;
-}
-
-article{
-  text-align: left;
-}
-
-@keyframes appearblog{
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-#blogheader, #maintitle {
-  animation:appearblog;
-  animation-duration: 2s;
-  animation-fill-mode: fowards;
-}
-
-#blogback {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0px;
-}
-
-body {
-  background-image: url("jadeempire-web.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+.content{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  padding:20px;
+  z-index:-1;
 }
