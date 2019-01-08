@@ -4,7 +4,6 @@ var gameCard = document.getElementById("gameCard");
 var bioVideo= document.getElementById("bioVideo");
 var codeVideo = document.getElementById("codeVideo");
 var gameVideo = document.getElementById("gameVideo");
-console.log(bioCard);
 
 bioCard.addEventListener("mouseenter",(event)=>{
   bioVideo.pause();
