@@ -5,9 +5,6 @@ var bioVideo= document.getElementById("bioVideo");
 var codeVideo = document.getElementById("codeVideo");
 var gameVideo = document.getElementById("gameVideo");
 var largeEnough = true;
-bioVideo.play();
-codeVideo.play();
-gameVideo.play();
 
 window.addEventListener('resize', function(){
     if(window.innerWidth < 600){
