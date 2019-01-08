@@ -4,24 +4,52 @@ var gameCard = document.getElementById("gameCard");
 var bioVideo= document.getElementById("bioVideo");
 var codeVideo = document.getElementById("codeVideo");
 var gameVideo = document.getElementById("gameVideo");
+var largeEnough = true;
+
+window.addEventListener('resize', function(){
+    if(window.innerWidth < 600){
+      largeEnough = false;
+    }
+});
 
 bioCard.addEventListener("mouseenter",(event)=>{
-  bioVideo.pause();
+  if(largeEnough)
+  {
+      bioVideo.pause();
+  }
+
 });
 bioCard.addEventListener("mouseleave",(event)=>{
-  bioVideo.play();
+  if(largeEnough)
+  {
+      bioVideo.play();
+  }
+
 });
 
 codeCard.addEventListener("mouseenter",(event)=>{
-  codeVideo.pause();
+  if(largeEnough)
+  {
+      codeVideo.pause();
+  }
 });
 codeCard.addEventListener("mouseleave",(event)=>{
-  codeVideo.play();
+  if(largeEnough)
+  {
+      codeVideo.play();
+  }
+
 });
 
 gameCard.addEventListener("mouseenter",(event)=>{
-  gameVideo.pause();
+  if(largeEnough)
+  {
+      gameVideo.pause();
+  }
 });
 gameCard.addEventListener("mouseleave",(event)=>{
-  gameVideo.play();
+  if(largeEnough)
+  {
+      gameVideo.play();
+  }
 });
