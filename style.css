@@ -70,7 +70,9 @@ p{
   .card{
     width:100vw;
     min-width:320px;
+    min-height:320px;
     height:100vw;
+
     margin-top:0px;
     margin-bottom:0px;
   }
