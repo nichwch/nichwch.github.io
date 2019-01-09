@@ -2,7 +2,7 @@ body{
   margin:0px;
   padding:0px;
 }
-h1,p{
+h1,p,h2{
   font-family: 'Roboto Mono', monospace;
   font-weight:bold;
 }
@@ -10,9 +10,12 @@ h1,p{
 h1{
   font-size:45px;
 }
+h2{
+  font-size:20px;
+}
 
 p{
-  font-size:15px;
+  font-size:13px;
 }
 
 .card{
@@ -50,7 +53,7 @@ p{
 
 .content{
   position:absolute;
-  background-color:rgba(242, 242, 242,0.5);
+  background-color:rgba(242, 242, 242,0.6);
   top:0px;
   left:0px;
   width:440px;
@@ -62,7 +65,7 @@ p{
 }
 
 .content:hover{
-  background-color:rgba(242, 242, 242,0.8);
+  background-color:rgba(242, 242, 242,0.85);
 }
 
 video::-webkit-media-controls-start-playback-button {
@@ -71,6 +74,18 @@ video::-webkit-media-controls-start-playback-button {
 
 /* Mobile Styles */
 @media only screen and (max-width: 600px) {
+
+  h1{
+    font-size:28px;
+  }
+  h2{
+    font-size:15px;
+  }
+
+  p{
+    font-size:10px;
+  }
+
   .card{
     width:100vw;
     min-width:320px;
