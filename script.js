@@ -6,6 +6,8 @@ var codeVideo = document.getElementById("codeVideo");
 var gameVideo = document.getElementById("gameVideo");
 var largeEnough = true;
 
+window.location.replace('http://nicholaschen.io/');
+
 window.addEventListener('resize', function(){
     if(window.innerWidth < 600){
       largeEnough = false;
